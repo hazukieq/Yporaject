@@ -141,7 +141,7 @@ typora &
 
 
 
-![image-20230611002933127](./img/LICENSE)
+![image-20230611002933127](./img/LICENSE.png)
 
 
 
