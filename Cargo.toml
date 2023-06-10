@@ -1,0 +1,13 @@
+[package]
+name = "node_inject"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+rasar = {git = 'https://github.com/Zerthox/rasar.git'}
+random-string = "1.0.0"
+
+[features]
+no_embed = []
+default = []
