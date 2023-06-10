@@ -123,13 +123,13 @@ typora &
 
 依次点击界面上方菜单栏选项 **help > my license(帮助 > 我的许可证...)** 
 
-![image-20230611002616301](/home/hazukie/.config/Typora/typora-user-images/image-20230611002616301.png)
+![image-20230611002616301](./img/image-20230611002616301.png)
 
 
 
 
 
-![image-20230611002645270](/home/hazukie/.config/Typora/typora-user-images/image-20230611002645270.png)
+![image-20230611002645270](./img/image-20230611002645270.png)
 
 
 
@@ -141,7 +141,7 @@ typora &
 
 
 
-![image-20230611002933127](/home/hazukie/.config/Typora/typora-user-images/image-20230611002933127.png)
+![image-20230611002933127](./img/LICENSE)
 
 
 
