@@ -1,30 +1,37 @@
-# NodeInject
-An inject tools for injecting js code into electron application
+## TYpora最新版激发教程
 
-Please follow DMCA when using this code
-### How it works
+> Yporainject（[Copy from repo NodeInject](https://github.com/DiamondHunters/NodeInject)）
 
-1. unpack `node_modules.asar` package (in `./resources`)
-2. write `hook.js`  into `raven` package directory (raven will be required at the early stage of startup in some application)
-3. modify `index.js` of `raven`,injecting require of `hook.js`
+> **[see the README of that repo](./NodeInject_README.md)**
+>
+> 作者：叶月绘梨依
+> 日期：2023年6月10日
+---
 
-> Currently using embedded javascript file (`hooklog.js`)
-
-### Usage
-
-1. modify `hook.js` if you need or enable `no_embed` feature to use specified js (`NO_EMBED_HOOK_JS_PATH`)  at runtime
-2. use `cargo build` to make  executable with embedded js or `cargo build --features no_embed` without embedded js
-3. Move the program to the electron application directory
-4. run
+##### 1. 下载最新版Typora安装包
 
 
-### Compatibility test
 
-- Windows / Typora 1.4.8          PASSED
-- Ubuntu / Typora 1.4.7             PASSED
+##### 2. 克隆Yporaject项目
 
-Since macos may adopt different packaging methods and webkit as the execution environment, this tool does not support applications under macos.
 
-### Examples
 
-https://github.com/DiamondHunters/NodeInject_Hook_example ：Use NodeInject to realize specific functions in Typora
+##### 3. 编译Yopraject项目
+
+
+
+##### 4. 复制二进制到安装目录下
+
+
+
+##### 5. 获取许可证激发码
+
+
+
+##### 6. 激活软件
+
+
+
+##### 参考文献
+1. [**(Linux/Windows) Typora 理论多版本兼容破解方案**](https://www.52pojie.cn/thread-1710146-1-1.html)
+2. [RUST 安装](https://www.rust-lang.org/zh-CN/learn/get-started)
