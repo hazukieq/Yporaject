@@ -151,7 +151,7 @@ typora &
 
 
 
-##### 参考文献
+##### 参考资料
 
 1. [**(Linux/Windows) Typora 理论多版本兼容破解方案**](https://www.52pojie.cn/thread-1710146-1-1.html)
 2. [RUST 安装](https://www.rust-lang.org/zh-CN/learn/get-started)
