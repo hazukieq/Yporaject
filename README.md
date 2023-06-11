@@ -66,7 +66,7 @@ cargo build
 #查看二进制是否生成,程序名称为 node_inject
 ls target/debug
 #尝试运行该二进制程序
-target/debug/node_inject
+cargo run
 output: 
 no node_modules.asar found
 move me to the root of your typora installation(the same directory as executable of electron)
@@ -87,7 +87,7 @@ sudo cp target/debug/node_inject /usr/share/typora
 #进入相关目录
 cd /usr/share/typora
 #给予二进制程序执行权限
-sudo chmod +x ./target/*
+sudo chmod +x node_Inject
 #检查二进制程序是否可以运行
 cargo run
 ```
