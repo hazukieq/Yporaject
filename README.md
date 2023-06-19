@@ -87,7 +87,7 @@ sudo cp target/debug/node_inject /usr/share/typora
 #进入相关目录
 cd /usr/share/typora
 #给予二进制程序执行权限
-sudo chmod +x node_Inject
+sudo chmod +x node_inject
 #检查二进制程序是否可以运行
 cargo run
 ```
