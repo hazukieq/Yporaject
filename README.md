@@ -89,7 +89,7 @@ cd /usr/share/typora
 #给予二进制程序执行权限
 sudo chmod +x node_inject
 #检查二进制程序是否可以运行
-cargo run
+./node_inject
 ```
 
 
