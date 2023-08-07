@@ -88,7 +88,7 @@ sudo cp target/debug/node_inject /usr/share/typora
 cd /usr/share/typora
 #给予二进制程序执行权限
 sudo chmod +x node_inject
-#检查二进制程序是否可以运行
+#运行二进制程序
 ./node_inject
 ```
 
