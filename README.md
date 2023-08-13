@@ -15,6 +15,7 @@
 > Since macos may adopt different packaging methods and webkit as the execution environment, this tool does not support applications under macos.
 #### 本仓库使用到的开源项目
 - [Node_inject](https://github.com/DiamondHunters/NodeInject)
+- [Node_inject_example](https://github.com/DiamondHunters/NodeInject)
 
 ---
 #### 1. 下载最新版Typora安装包
