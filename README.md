@@ -98,7 +98,10 @@ sudo cp target/debug/node_inject /usr/share/typora
 cd /usr/share/typora
 #给予二进制程序执行权限
 sudo chmod +x node_inject
+
 #运行二进制程序
+#(请注意程序运行输出信息，观察是否运行成功！！)
+#若无读写权限,建议使用 sudo ./node_inject
 ./node_inject
 ```
 
