@@ -51,7 +51,7 @@
 
   
 
-#### 2. 克隆Yporaject项目
+#### 2. 克隆 Yporaject 项目
 
 ```bash
 git clone https://github.com/hazukieq/Yporaject.git
@@ -59,9 +59,9 @@ git clone https://github.com/hazukieq/Yporaject.git
 
 
 
-#### 3.配置 rust 编译环境
+#### 3. 配置 Rust 编译环境
 
-由于编译项目需要 **rust** 的支持，所以我们需要配置相关环境(若已有，则可跳过该步骤)
+由于编译项目需要 **Rust** 的支持，所以我们需要配置相关环境(若已有，则可跳过该步骤)
 
 ```bash
 #运行官方脚本安装即可
@@ -76,10 +76,10 @@ cargo 1.70.0 (ec8a8a0ca 2023-04-25)
 
 
 
-#### 4. 编译Yopraject项目
+#### 4. 编译 Yopraject 项目
 
 ```bash
-#进入Yoprainject项目
+#进入 Yoprainject 项目
 cd Yporainject
 #运行编译命令
 cargo build
@@ -140,7 +140,7 @@ License for you: xxxxxx-xxxxxx-xxxxxx-xxxxxx
 #### 7. 激活软件
 
 ```bash
-#运行TYPORA(你也可以在桌面上点击相关图标)
+#运行 TYPORA(你也可以在桌面上点击相关图标)
 typora &
 ```
 
