@@ -1,14 +1,14 @@
-## TYpora最新版激发教程
+## TYpora 最新版激发教程
 
 > Yporainject（[Copy from repo NodeInject](https://github.com/DiamondHunters/NodeInject)）
 
-> **[see the README of that repo](./NodeInject_README.md)**
+> **[查看 Node_inject 项目说明书 see the README of that repo](./NodeInject_README.md)**
 >
 > 作者：叶月绘梨依
 > 日期：2023年6月10日
 ---
 
-#### 已通过测试平台(来自原项目Node_inject)
+#### 已通过测试平台(来自原项目 Node_inject)
 - [x] Windows
 - [x] Ubuntu
 - [ ] MacOs
