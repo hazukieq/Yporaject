@@ -17,7 +17,7 @@
 - [Node_inject](https://github.com/DiamondHunters/NodeInject)
 - [Node_inject_example](https://github.com/DiamondHunters/NodeInject)
 
-#### [怎么提问 ISSUE](./issue_template.md)
+### **[怎么提问 how to issue](./issue_template.md)**
 请您提问之前，请自行确认:
 - 尝试通过网络解决遇到的问题，你确信网络不能解决你的问题
 - 确定已有的 **issue** 不能解决你的问题
