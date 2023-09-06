@@ -81,8 +81,6 @@ cp NodeInject_Hook_example/hook.js Yporaject/src
 
 # 将 NodeInject_Hook_example/license_gen 文件夹复制到 Yporaject 文件夹
 cp NodeInject_Hook_example/license_gen Yporaject -r
-# 进入 Yporaject 文件夹
-cd Yporaject
 ```
 
 
