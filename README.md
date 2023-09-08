@@ -102,11 +102,11 @@ cargo 1.70.0 (ec8a8a0ca 2023-04-25)
 
 
 
-#### 4. 编译 Yopraject 项目
+#### 4. 编译 Yporaject 项目
 
 ```bash
-# 进入 Yopraject 项目
-cd Yopraject
+# 进入 Yporaject 项目
+cd Yporaject
 # 运行编译命令
 cargo build
 # 查看二进制是否生成,程序名称为 node_inject
