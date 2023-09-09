@@ -138,7 +138,7 @@ sudo chmod +x node_inject
 # 运行二进制程序
 # (请注意程序运行输出信息，观察是否运行成功！！)
 # 若无读写权限,建议使用 sudo ./node_inject
-./node_inject
+sudo ./node_inject
 ```
 
 
