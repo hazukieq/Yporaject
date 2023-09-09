@@ -41,10 +41,10 @@
   
   # 下载 Typora 安装包
   # X86(Amd) 架构 
-  wget https://download2.typoraio.cn/linux/typora_1.6.6_amd64.deb --output-document typora.deb
+  wget https://download2.typoraio.cn/linux/typora_1.7.4_amd64.deb --output-document typora.deb
   
   # Arm 架构
-  wget https://download2.typoraio.cn/linux/typora_1.6.6_arm64.deb --output-document typora.deb
+  wget https://download2.typoraio.cn/linux/typora_1.7.4_arm64.deb --output-document typora.deb
   
   # 安装 Typora 软件包
   sudo dpkg -i typora.deb
