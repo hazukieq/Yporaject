@@ -27,6 +27,7 @@ jobs:
         with:
           RUSTTARGET: ${{ matrix.target }}
           ARCHIVE_TYPES: ${{ matrix.archive }}
+          ARCHIVE_NAME: node_inject
 
       - uses: actions/checkout@master
       - name: Compile and release2
@@ -37,3 +38,4 @@ jobs:
           RUSTTARGET: ${{ matrix.target }}
           ARCHIVE_TYPES: ${{ matrix.archive }}
           SRC_DIR: license-gen
+          ARCHIVE_NAME: license-gen
