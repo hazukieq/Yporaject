@@ -19,8 +19,7 @@ jobs:
           - target: x86_64-apple-darwin
             archive: zip
     steps:
-      - uses: actions/checkout@master
-      - name: Compile and release1
+      - name: Compile node_inject
         uses: rust-build/rust-build.action@v1.4.3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -30,7 +29,7 @@ jobs:
           ARCHIVE_NAME: node_inject
 
       - uses: actions/checkout@master
-      - name: Compile and release2
+      - name: Compile license-gen
         uses: rust-build/rust-build.action@v1.4.3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
