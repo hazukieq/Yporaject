@@ -1,7 +1,9 @@
 # .github/workflows/release.yml
-
-on: workflow_dispatch
-
+name: Yporaject  CI
+on: 
+  release:
+    types: [created]
+    
 jobs:
   release:
     name: release ${{ matrix.target }}
