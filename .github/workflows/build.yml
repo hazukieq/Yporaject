@@ -26,7 +26,7 @@ jobs:
         with:
           RUSTTARGET: ${{ matrix.target }}
           ARCHIVE_TYPES: ${{ matrix.archive }}
-          ARCHIVE_NAME: node_inject ${{ matrix.target }}
+          ARCHIVE_NAME: node_inject_${{ matrix.target }}
           
   release_license-gen:
     name: release license-gen ${{ matrix.target }}
@@ -50,7 +50,7 @@ jobs:
           RUSTTARGET: ${{ matrix.target }}
           ARCHIVE_TYPES: ${{ matrix.archive }}
           SRC_DIR: "license-gen"
-          ARCHIVE_NAME: license-gen ${{ matrix.target }}
+          ARCHIVE_NAME: license-gen_${{ matrix.target }}
 
 
 
