@@ -5,9 +5,10 @@ on:
     types: [created]
     
 jobs:
-  release:
-    name: release ${{ matrix.target }}
+  release_node_inject:
+    name: release node_inject ${{ matrix.target }}
     runs-on: ubuntu-latest
+    if: github.event_name == 'release'
     strategy:
       fail-fast: false
       matrix:
@@ -15,26 +16,62 @@ jobs:
           - target: x86_64-pc-windows-gnu
             archive: zip
           - target: x86_64-unknown-linux-musl
-            archive: tar.gz tar.xz tar.zst
+            archive: tar.gz
           - target: x86_64-apple-darwin
             archive: zip
+          - target: wasm32-wasi
+            archive: zip tar.gz
     steps:
-      - name: Compile node_inject
-        uses: rust-build/rust-build.action@v1.4.3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          RUSTTARGET: ${{ matrix.target }}
-          ARCHIVE_TYPES: ${{ matrix.archive }}
-          ARCHIVE_NAME: node_inject
-
       - uses: actions/checkout@master
-      - name: Compile license-gen
-        uses: rust-build/rust-build.action@v1.4.3
+      - name: Compile and release
+        uses: rust-build/rust-build.action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           RUSTTARGET: ${{ matrix.target }}
           ARCHIVE_TYPES: ${{ matrix.archive }}
-          SRC_DIR: license-gen
-          ARCHIVE_NAME: license-gen
+          MINIFY: "yes"
+
+          
+  release_license-gen:
+    name: release license-gen ${{ matrix.target }}
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release'
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - target: x86_64-pc-windows-gnu
+            archive: zip
+          - target: x86_64-unknown-linux-musl
+            archive: tar.gz
+          - target: x86_64-apple-darwin
+            archive: zip
+          - target: wasm32-wasi
+            archive: zip tar.gz
+    steps:
+      - uses: actions/checkout@master
+      - name: Compile and release
+        uses: rust-build/rust-build.action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          RUSTTARGET: ${{ matrix.target }}
+          ARCHIVE_TYPES: ${{ matrix.archive }}
+          MINIFY: "yes"
+          SRC_DIR: "license-gen"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
