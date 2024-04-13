@@ -29,6 +29,33 @@
 
 
 ---
+
+
+## 最新方法
+
+#### 1. 使用 inject.py 脚本
+
+#### 2. 使用 inject.sh 脚本
+
+**注意**：license_code 文件内置有已经生成的序列码，可直接使用。若出现意外，那么还请安装 rust 环境，并通过以下步骤：
+
+```bash
+# 假设您已经在 Yproject 目录下
+# 并成功配置 rust 环境
+cd ./license-gen
+cargo build
+./target/debug/license-gen
+输出 License for you: xxxxxx...
+```
+
+
+
+license-gen/
+
+![](/home/hazukie/apps_git/Yporaject/img/image-2024041301.png)
+
+---
+
 #### 1. 下载最新版 Typora 安装包
 
 - [前往 Typora 中文官网下载](https://typoraio.cn/releases/all)
@@ -94,7 +121,7 @@ cp NodeInject_Hook_example/license_gen Yporaject -r
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # 检查 cargo，若看到如下版本信息，则说明配置成功
-cargo -v
+cargo -V
 cargo 1.70.0 (ec8a8a0ca 2023-04-25)
 ```
 
