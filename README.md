@@ -50,9 +50,7 @@ cargo build
 
 
 
-license-gen/
-
-![](/home/hazukie/apps_git/Yporaject/img/image-2024041301.png)
+![](./img/image-2024041301.png)
 
 ---
 
