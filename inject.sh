@@ -2,11 +2,38 @@
 # made by hazukie
 # date: 2024.4.13
 
+# 打印警告日志
+warning() {
+    echo -e "\033[31m$1\033[0m"
+}
+
+# 打印日志
+infos() {
+    echo -e "\033[32m$1\033[0m"
+}
+
 # 待注入数据文件路径
 HOOK_JS_PATH="./src/hooklog.js"
 
 # Typora 安装路径
 TYPORA_INSTALLED_PATH="/usr/share/typora"
+
+infos "Typora 安装路径: $TYPORA_INSTALLED_PATH"
+warning "Typora 安装路径是否正确?(y/n)"
+read -r check
+echo "==>${check:0:1}"
+if [[ "${check:0:1}" != "y" ]];then
+	infos "不正确的话你可以尝试输入新的路径:"
+	read -r reply
+	if [[ -z $reply ]];then
+		warning "您输入为空...脚本已正常退出，请稍候重试！"
+		exit 0
+	fi
+	TYPORA_INSTALLED_PATH="$reply"
+fi
+infos "已确认当前安装路径为: $TYPORA_INSTALLED_PATH"
+
+
 
 # 注入 JS 文件路径
 HOOK_JS_WRITE_PATH="$TYPORA_INSTALLED_PATH/node/raven/hook.js"
@@ -16,6 +43,7 @@ INJECT_JS_DIR_ASAR_PATH="$TYPORA_INSTALLED_PATH/resources/node_modules.asar"
 
 # 注入 JS 文件的文件夹路径
 INJECT_JS_DIR_PATH="$TYPORA_INSTALLED_PATH/node"
+
 
 # 注入JS文件的目的文件路径
 INJECT_JS_PATH="$TYPORA_INSTALLED_PATH/node/raven/index.js"
@@ -41,32 +69,7 @@ append_require2file() {
     echo -e "\nrequire('./hook')" |sudo tee -a "$INJECT_JS_PATH"
 }
 
-# 打印警告日志
-warning() {
-    echo -e "\033[31m$1\033[0m"
-}
 
-# 打印日志
-infos() {
-    echo -e "\033[32m$1\033[0m"
-}
-
-
-
-infos "Typora 安装路径: $TYPORA_INSTALLED_PATH"
-warning "Typora 安装路径是否正确?(y/n)"
-read -r check
-echo "==>${check:0:1}"
-if [[ "${check:0:1}" != "y" ]];then
-	infos "不正确的话你可以尝试输入新的路径:"
-	read -r reply
-	if [[ -z $reply ]];then
-		warning "您输入为空...脚本已正常退出，请稍候重试！"
-		exit 0
-	fi
-	TYPORA_INSTALLED_PATH="$reply"
-fi
-infos "已确认当前安装路径为: $TYPORA_INSTALLED_PATH"
 
 if file_exist "$INJECT_JS_DIR_PATH"; then
     warning "您可能已经注入过 hook 文件了！\n警告：在当前目录下发现 node 文件夹"
