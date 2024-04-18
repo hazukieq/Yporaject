@@ -33,7 +33,7 @@
 
 ## 最新方法
 
-#### 1. 使用 [`Python 脚本 inject.sh`](./inject.py)
+#### 1. 使用 [`Python 脚本 inject.py`](./inject.py)
 
 #### 2. 使用 [`Bash 脚本 inject.sh`](./inject.sh)
 
