@@ -33,9 +33,9 @@
 
 ## 最新方法
 
-#### 1. 使用 [Python 脚本 inject.sh](./inject.py)`
+#### 1. 使用 [`Python 脚本 inject.sh`](./inject.py)
 
-#### 2. 使用 `[Bash 脚本 inject.sh](./inject.sh)`
+#### 2. 使用 [`Bash 脚本 inject.sh`](./inject.sh)
 
 #### 3. 若不想使用以上两个脚本，或使用以上脚本运行失败者，则请参照 **原方法** 进行。
 
