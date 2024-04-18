@@ -1,6 +1,8 @@
 #!/bin/bash
 # made by hazukie
 # date: 2024.4.13
+# JUST FOR LEARNING PURPOSES, DON'T USE THIS TO CRACK SOFTWARE.
+# 只是出于学习目的，请勿将其用于破解软件，否则后果自负。用户行为均与本项目作者无关！
 
 # 打印警告日志
 warning() {
