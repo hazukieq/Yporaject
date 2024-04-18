@@ -33,11 +33,13 @@
 
 ## 最新方法
 
-#### 1. 使用 inject.py 脚本
+#### 1. 使用 [Python 脚本 inject.sh](./inject.py)`
 
-#### 2. 使用 inject.sh 脚本
+#### 2. 使用 `[Bash 脚本 inject.sh](./inject.sh)`
 
-**注意**：license_code 文件内置有已经生成的序列码，可直接使用。若出现意外，那么还请安装 rust 环境，并通过以下步骤：
+#### 3. 若不想使用以上两个脚本，或使用以上脚本运行失败者，则请参照 **原方法** 进行。
+
+**注意**：license_code 文件内置有已经生成的序列码，可直接使用。若出现意外，那么还请安装 rust 环境，并通过以下步骤以获得激活序列：
 
 ```bash
 # 假设您已经在 Yproject 目录下
@@ -48,11 +50,11 @@ cargo build
 输出 License for you: xxxxxx...
 ```
 
-
-
 ![](./img/image-2024041301.png)
 
 ---
+
+## 原方法
 
 #### 1. 下载最新版 Typora 安装包
 
