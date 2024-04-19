@@ -36,7 +36,7 @@
 #### 1. 使用 [`Python 脚本 inject.py`](./inject.py)
 
 #### 2. 使用 [`Bash 脚本 inject.sh`](./inject.sh)
-**脚本依赖要求**: 以上脚本均依赖请 node, 故请安装 node(亦可通过 nvm 管理器安装 node)
+**脚本依赖要求**: 以上脚本均依赖 node 运行库, 故请安装 node(亦可通过 nvm 管理器安装 node)
 
 ```bash
 #arch 
