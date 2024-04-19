@@ -36,6 +36,14 @@
 #### 1. 使用 [`Python 脚本 inject.py`](./inject.py)
 
 #### 2. 使用 [`Bash 脚本 inject.sh`](./inject.sh)
+**脚本依赖要求**: 以上脚本均依赖请 node, 故请安装 node(亦可通过 nvm 管理器安装 node)
+
+```bash
+#arch 
+sudo pacman -S nodejs
+#ubuntu
+sudo apt install nodejs
+```
 
 #### 3. 若不想使用以上两个脚本，或使用以上脚本运行失败者，则请参照 **原方法** 进行。
 
