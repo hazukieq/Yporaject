@@ -83,16 +83,16 @@ def append_require2file():
 
 # 打印警告日志
 def warning(strs):
-    print("\033[31m%s\033[0m" % strs)
+    print("\033[31m->%s\033[0m" % strs)
 
 
 # 打印日志
 def infos(strs):
-    print("\033[32m%s\033[0m" % strs)
+    print("\033[32m=>%s\033[0m" % strs)
 
 
 if __name__ == "__main__":
-    check_node='type node'
+    check_node='type node >/dev/null 2>&1'
     if os.system(check_node)!=0:
         warning('未找到 node')
         sys.exit(0)
@@ -103,7 +103,8 @@ if __name__ == "__main__":
     file_mkdir(BUILD_DIR)
     file_mkdir(BACKUP_DIR)
     if file_exist(INJECT_JS_DIR_PATH):
-        warning('您可能已经注入过 hook 文件了！\n警告：在当前目录下发现 node 文件夹')
+        warning('您可能已经注入过 hook 文件了！')
+        warning('警告：在当前目录下发现 node 文件夹')
         infos('您若不确定之前是否注入过该文件的话，请手动删除当前目录下的 node 文件夹(%s)！'%INJECT_JS_DIR_PATH)
         sys.exit(0)
     if not file_exist(INJECT_JS_DIR_ASAR_PATH):
@@ -112,10 +113,10 @@ if __name__ == "__main__":
         sys.exit(0)
     infos('正在复制%s 至 当前目录下(%s)' % (INJECT_JS_DIR_ASAR_PATH,CUR_INJECT_JS_DIR_ASAR_PATH))
     if os.system('sudo cp %s %s' %(INJECT_JS_DIR_ASAR_PATH,CUR_INJECT_JS_DIR_ASAR_PATH))==0:
-        print('复制成功！')
+        infos('复制成功！')
         os.system('cp %s %s'%(CUR_INJECT_JS_DIR_ASAR_PATH,BACKUP_DIR))
     else:
-        print('当执行 %s 时发生错误' % ('sudo cp %s %s' %(INJECT_JS_DIR_ASAR_PATH,CUR_INJECT_JS_DIR_ASAR_PATH)))
+        warning('当执行 %s 时发生错误' % ('sudo cp %s %s' %(INJECT_JS_DIR_ASAR_PATH,CUR_INJECT_JS_DIR_ASAR_PATH)))
         sys.exit(0)
 
     infos('正在解压 node_modues.asar')
