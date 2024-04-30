@@ -92,6 +92,13 @@ def infos(strs):
 
 
 if __name__ == "__main__":
+    check_node='type node'
+    if os.system(check_node)!=0:
+        warning('未找到 node')
+        sys.exit(0)
+    else:
+        infos('找到 node')
+
     infos("Typora 安装路径: "+TYPORA_INSTALLED_PATH)
     file_mkdir(BUILD_DIR)
     file_mkdir(BACKUP_DIR)
