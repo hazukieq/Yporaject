@@ -1,0 +1,63 @@
+{
+  "_from": "hjson@^1.8.4",
+  "_id": "hjson@1.8.4",
+  "_inBundle": false,
+  "_integrity": "sha1-C8j/sCGY0hjEm1iZGxH2BIUBHTY=",
+  "_location": "/hjson",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "hjson@^1.8.4",
+    "name": "hjson",
+    "escapedName": "hjson",
+    "rawSpec": "^1.8.4",
+    "saveSpec": null,
+    "fetchSpec": "^1.8.4"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/hjson/-/hjson-1.8.4.tgz",
+  "_shasum": "0bc8ffb02198d218c49b58991b11f60485011d36",
+  "_spec": "hjson@^1.8.4",
+  "_where": "/home/ab/workspace/TypeMark",
+  "author": {
+    "name": "Christian Zangl"
+  },
+  "bin": {
+    "hjson": "./bin/hjson"
+  },
+  "bugs": {
+    "url": "https://github.com/laktak/hjson-js/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "JSON for Humans, allows comments and is less error prone.",
+  "devDependencies": {
+    "uglify-js": "^2.4.24"
+  },
+  "homepage": "http://hjson.org",
+  "keywords": [
+    "json",
+    "comments",
+    "config",
+    "hjson",
+    "parser",
+    "serializer",
+    "human"
+  ],
+  "license": "MIT",
+  "main": "./lib/hjson.js",
+  "name": "hjson",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laktak/hjson-js.git"
+  },
+  "scripts": {
+    "lint": "jshint bin/hjson lib/hjson.js",
+    "min": "node node_modules/uglify-js/bin/uglifyjs lib/hjson.js --comments -c -m -o lib/hjson.min.js",
+    "test": "node ./test/test.js"
+  },
+  "version": "1.8.4"
+}

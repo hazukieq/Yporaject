@@ -1,0 +1,109 @@
+{
+  "_from": "electron-fetch@^1.7.4",
+  "_id": "electron-fetch@1.7.4",
+  "_inBundle": false,
+  "_integrity": "sha512-+fBLXEy4CJWQ5bz8dyaeSG1hD6JJ15kBZyj3eh24pIVrd3hLM47H/umffrdQfS6GZ0falF0g9JT9f3Rs6AVUhw==",
+  "_location": "/electron-fetch",
+  "_phantomChildren": {
+    "iconv-lite": "0.6.3"
+  },
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "electron-fetch@^1.7.4",
+    "name": "electron-fetch",
+    "escapedName": "electron-fetch",
+    "rawSpec": "^1.7.4",
+    "saveSpec": null,
+    "fetchSpec": "^1.7.4"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/electron-fetch/-/electron-fetch-1.7.4.tgz",
+  "_shasum": "af975ab92a14798bfaa025f88dcd2e54a7b0b769",
+  "_spec": "electron-fetch@^1.7.4",
+  "_where": "/home/ab/workspace/TypeMark",
+  "author": {
+    "name": "Mehdi Kouhen"
+  },
+  "bugs": {
+    "url": "https://github.com/arantes555/electron-fetch/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "encoding": "^0.1.13"
+  },
+  "deprecated": false,
+  "description": "A light-weight module that brings window.fetch to electron's background process",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/register": "^7.15.3",
+    "abortcontroller-polyfill": "^1.7.3",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-istanbul": "^6.0.0",
+    "basic-auth-parser": "0.0.2",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "codecov": "^3.8.3",
+    "cross-env": "^7.0.3",
+    "electron": "^13.2.1",
+    "electron-mocha": "^10.1.0",
+    "form-data": "^4.0.0",
+    "is-builtin-module": "^3.1.0",
+    "istanbul-api": "^3.0.0",
+    "istanbul-lib-coverage": "^3.0.0",
+    "mocha": "^9.1.0",
+    "nyc": "^15.1.0",
+    "parted": "^0.1.1",
+    "promise": "^8.1.0",
+    "proxy": "^1.0.2",
+    "resumer": "0.0.0",
+    "rollup": "^2.56.3",
+    "rollup-plugin-babel": "^4.4.0",
+    "standard": "^16.0.3",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5",
+    "whatwg-url": "^9.1.0",
+    "xvfb-maybe": "^0.2.1"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/index.es.js",
+    "index.d.ts"
+  ],
+  "homepage": "https://github.com/arantes555/electron-fetch",
+  "keywords": [
+    "fetch",
+    "http",
+    "promise",
+    "electron"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "name": "electron-fetch",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arantes555/electron-fetch.git"
+  },
+  "scripts": {
+    "build": "cross-env BABEL_ENV=rollup rollup -c",
+    "coverage": "xvfb-maybe cross-env BABEL_ENV=coverage electron-mocha --require @babel/register test/test.js --reporter test/coverage-reporter.js",
+    "lint": "standard",
+    "prepublishOnly": "npm run build",
+    "pretest:typings": "npm run build",
+    "report": "npm run lint && npm run test:typings && npm run coverage && codecov -f coverage/coverage-final.json",
+    "test": "npm run test:electron && npm run test:node && npm run test:typings && standard",
+    "test:electron": "xvfb-maybe cross-env BABEL_ENV=test electron-mocha --require @babel/register test/test.js",
+    "test:node": "cross-env BABEL_ENV=test mocha --require @babel/register test/test.js",
+    "test:typings": "ts-node test/test-typescript.ts"
+  },
+  "types": "index.d.ts",
+  "version": "1.7.4"
+}

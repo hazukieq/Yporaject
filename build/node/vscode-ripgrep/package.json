@@ -1,0 +1,55 @@
+{
+  "_from": "vscode-ripgrep@^1.13.2",
+  "_id": "vscode-ripgrep@1.13.2",
+  "_inBundle": false,
+  "_integrity": "sha512-RlK9U87EokgHfiOjDQ38ipQQX936gWOcWPQaJpYf+kAkz1PQ1pK2n7nhiscdOmLu6XGjTs7pWFJ/ckonpN7twQ==",
+  "_location": "/vscode-ripgrep",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "vscode-ripgrep@^1.13.2",
+    "name": "vscode-ripgrep",
+    "escapedName": "vscode-ripgrep",
+    "rawSpec": "^1.13.2",
+    "saveSpec": null,
+    "fetchSpec": "^1.13.2"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/vscode-ripgrep/-/vscode-ripgrep-1.13.2.tgz",
+  "_shasum": "8ccebc33f14d54442c4b11962aead163c55b506e",
+  "_spec": "vscode-ripgrep@^1.13.2",
+  "_where": "/home/ab/workspace/TypeMark",
+  "author": {
+    "name": "Rob Lourens"
+  },
+  "bugs": {
+    "url": "https://github.com/microsoft/vscode-ripgrep/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "https-proxy-agent": "^4.0.0",
+    "proxy-from-env": "^1.1.0"
+  },
+  "deprecated": "This package has been renamed to @vscode/ripgrep, please update to the new name",
+  "description": "A module for using ripgrep in a Node project",
+  "devDependencies": {
+    "@types/node": "^10.12.0"
+  },
+  "homepage": "https://github.com/microsoft/vscode-ripgrep#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "vscode-ripgrep",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microsoft/vscode-ripgrep.git"
+  },
+  "scripts": {
+    "postinstall": "node ./lib/postinstall.js"
+  },
+  "typings": "lib/index.d.ts",
+  "version": "1.13.2"
+}

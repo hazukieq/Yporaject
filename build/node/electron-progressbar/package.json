@@ -1,0 +1,58 @@
+{
+  "_from": "electron-progressbar@^1.2.0",
+  "_id": "electron-progressbar@1.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-I89HaI61SF5wl8c4p62UU3RXhL0xByzl4XH/miwb1e/VNUtRj5WCe/wJ5pNikfC01+/4aAOlNsbmkfsvQjtW6Q==",
+  "_location": "/electron-progressbar",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "electron-progressbar@^1.2.0",
+    "name": "electron-progressbar",
+    "escapedName": "electron-progressbar",
+    "rawSpec": "^1.2.0",
+    "saveSpec": null,
+    "fetchSpec": "^1.2.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/electron-progressbar/-/electron-progressbar-1.2.0.tgz",
+  "_shasum": "3628ee759da5c4b6ae08887843b54d7364477310",
+  "_spec": "electron-progressbar@^1.2.0",
+  "_where": "/home/ab/workspace/TypeMark",
+  "author": {
+    "name": "Anderson Mamede",
+    "email": "mamede.anderson@gmail.com",
+    "url": "http://andersonmamede.com"
+  },
+  "bugs": {
+    "url": "https://github.com/AndersonMamede/electron-progressbar/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "extend": "^3.0.1"
+  },
+  "deprecated": false,
+  "description": "Progress bar component for Electron applications",
+  "devDependencies": {
+    "electron": "^1.7.5"
+  },
+  "homepage": "https://github.com/AndersonMamede/electron-progressbar",
+  "keywords": [
+    "electron",
+    "progress",
+    "progressbar",
+    "loading",
+    "processing"
+  ],
+  "license": "MIT",
+  "main": "source/index.js",
+  "name": "electron-progressbar",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndersonMamede/electron-progressbar.git"
+  },
+  "version": "1.2.0"
+}
