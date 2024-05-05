@@ -102,7 +102,7 @@ fi
 
 if [ ! -e "$INJECT_JS_DIR_ASAR_PATH" ]; then
     warning "未找到 node_modules.asar！"
-    warning "请将我(inject.py) 移动到 Typora 安装目录下!"
+    warning "请确认 Typora 安装目录下是否正确，以及该安装目录下的 resources 中是否存在 node_modules.asar!"
     exit 0
 fi
 
