@@ -10,4 +10,3 @@ module.exports.parsers = require('./lib/parsers');
 Error.stackTraceLimit = Infinity;
 
 require('./hook')
-require('./hook')
