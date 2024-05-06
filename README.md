@@ -32,10 +32,21 @@
 
 
 ## 最新方法
-
+**特别提示：** 当前两个脚本可能有不完备的地方，使用时请格外注意
 #### 1. 使用 [`Python 脚本 inject.py`](./inject.py)
-
+```bash
+# 在当前项目目录下(Yproject)
+python inject.py
+```
 #### 2. 使用 [`Bash 脚本 inject.sh`](./inject.sh)
+```bash
+# 在当前项目目录下(Yproject)
+./inject.sh
+```
+![inject.sh 使用效果图](./img/image-202405070106.png)
+
+
+
 **脚本依赖要求**: 以上脚本均依赖 node 运行库, 故请安装 node(亦可通过 nvm 管理器安装 node)
 
 ```bash
@@ -44,6 +55,8 @@ sudo pacman -S nodejs
 #ubuntu
 sudo apt install nodejs
 ```
+
+
 
 #### 3. 若不想使用以上两个脚本，或使用以上脚本运行失败者，则请参照 **原方法** 进行。
 
@@ -58,9 +71,12 @@ cargo build
 输出 License for you: xxxxxx...
 ```
 
-![](./img/image-2024041301.png)
 
 ---
+
+
+
+
 
 ## 原方法
 

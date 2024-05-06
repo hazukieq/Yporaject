@@ -126,7 +126,7 @@ check_node
 
 infos "复制 node_modules 至 当前目录下($(pwd)/build)"
 
-check_dangerous_cmd "sudo cp $INJECT_JS_DIR_ASAR_PATH $CUR_INJECT_ASAR_PATH";
+check_dangerous_cmd "sudo cp $INJECT_JS_DIR_ASAR_PATH $CUR_INJECT_ASAR_PATH"
 sudo cp $INJECT_JS_DIR_ASAR_PATH $CUR_INJECT_ASAR_PATH
 
 #if [[ ! -d backup ]];then
