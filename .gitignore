@@ -13,6 +13,7 @@
 
 
 # Added by cargo
-./license-gen/target
-/target
-/.idea
+license-gen/target
+.idea
+build
+target
