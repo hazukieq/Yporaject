@@ -14,6 +14,14 @@ infos() {
     printf "\033[32m=> $*\n\033[0m"
 }
 
+# 捕获 Ctrl+C 中断键
+trap 'onCtrlC' INT
+function onCtrlC() {
+	printf "\n"
+	warning "触发 Ctrl+C,已中止当前脚本运行..."
+	exit 0
+}
+
 # 待注入数据文件路径
 CUR_HOOK_JS_PATH="./src/hooklog.js"
 
