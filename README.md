@@ -30,8 +30,8 @@
 
 ---
 
-
 ## 最新方法
+**激活时请勾选国内服务器，否则会激活不成功**
 **特别提示：** 当前两个脚本可能有不完备的地方，使用时请格外注意
 #### 1. 使用 [`Python 脚本 inject.py`](./inject.py)
 ```bash
@@ -44,6 +44,26 @@ python inject.py
 ./inject.sh
 ```
 ![inject.sh 使用效果图](./img/image-202405070106.png)
+
+
+
+### **Windows 平台**
+
+**当前仅在 win10 下 powershell(管理员运行模式) 测试通过,可能仍有不足之处**
+**使用前，请谨慎通读脚本，或备份 typora 安装包以便重新安装**
+[GBK 编码版批处理文件](./inject_bgk.bat)
+[UTF 编码版批处理文件](./inject.bat)
+```bash
+# 请 搜索 powershell,并以管理员权限运行
+
+## 以下均假定在 管理员模式 powershell 终端下运行!!
+# 移动至当前项目处
+# 比如 当前项目为 D:\Yproject
+
+d: #切换到 D 盘
+cd Yproject # 移动到相关目录
+.\inject_gbk.bat
+```
 
 
 
