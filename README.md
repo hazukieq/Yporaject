@@ -51,8 +51,10 @@ python inject.py
 
 **当前仅在 win10 下 powershell(管理员运行模式) 测试通过,可能仍有不足之处**
 **使用前，请谨慎通读脚本，或备份 typora 安装包以便重新安装**
-[GBK 编码版批处理文件](./inject_bgk.bat)
-[UTF 编码版批处理文件](./inject.bat)
+
+[GBK 编码版批处理文件 inject_gbk.bat ](./inject_gbk.bat) 
+[UTF 编码版批处理文件 inject_utf.bat ](./inject_utf.bat)
+
 ```bash
 # 请 搜索 powershell,并以管理员权限运行
 
@@ -74,6 +76,14 @@ cd Yproject # 移动到相关目录
 sudo pacman -S nodejs
 #ubuntu
 sudo apt install nodejs
+
+#windows
+#请先安装 nodejs
+# 推荐：https://github.com/coreybutler/nvm-windows
+# 或者参考：https://zhuanlan.zhihu.com/p/442215189
+# 找到安装路径下的node.exe，复制路径
+# 然后更改 inject_gbk.bat或 inject_utf.bat 中的 NODE_INSTALLED_PATH 值
+
 ```
 
 
