@@ -53,6 +53,7 @@ python inject.py
 **使用前，请谨慎通读脚本，或备份 typora 安装包以便重新安装**
 
 [GBK 编码版批处理文件 inject_gbk.bat ](./inject_gbk.bat) 
+
 [UTF 编码版批处理文件 inject_utf.bat ](./inject_utf.bat)
 
 ```bash
