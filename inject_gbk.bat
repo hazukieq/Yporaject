@@ -61,6 +61,12 @@ set INJECT_ASAR_PATH=%TYPORA_INSTALLED_PATH:"=%\node_modules.asar
 call :infos %INJECT_ASAR_PATH%
 
 :: 检测 node 是否存在
+call :ask "请输入 Node 安装路径"
+call :infos "你为避免反复确认,可以直接改 NODE_INSTALLED_PATH 的值！！"
+set NODE_INSTALLED_PATH=
+set NODE_INSTALLED_PATH=%ret: =%
+call :infos "Node 安装路径为: " %NODE_INSTALLED_PATH%
+
 call :checkf %NODE_INSTALLED_PATH%
 :: 正在测试 node 是否可用...
 call :checkf %NODE_INSTALLED_PATH%
