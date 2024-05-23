@@ -177,7 +177,7 @@ mkinit
 
 # 解压 asar 文件
 infos "正在解压 node_modues.asar"
-node ./asar_modules/node_modules/@electron/asar/bin/asar.js extract $CUR_INJECT_ASAR_PATH $CUR_INJECT_JS_DIR_PATH
+node $ASAR_BIN extract $CUR_INJECT_ASAR_PATH $CUR_INJECT_JS_DIR_PATH
 infos "成功解压至 $(pwd)/node 文件夹中！\n"
 
 # 添加js文件和依赖
@@ -190,7 +190,7 @@ infos "在 $CUR_INJECT_JS_PATH 添加依赖成功！\n"
 
 # 重新打包成 asar 文件
 infos "正在重新打包 node 文件夹至 $CUR_PACKED_ASAR_PATH..."
-node ./asar_modules/node_modules/@electron/asar/bin/asar.js pack $CUR_INJECT_JS_DIR_PATH $CUR_PACKED_ASAR_PATH
+node $ASAR_BIN pack $CUR_INJECT_JS_DIR_PATH $CUR_PACKED_ASAR_PATH
 infos "打包完成！\n"
 
 # 复制 asar 文件到软件处
@@ -201,7 +201,6 @@ sudo cp $CUR_PACKED_ASAR_PATH $INJECT_JS_DIR_ASAR_PATH
 # 善后工作
 warning "若执行当前脚本后不能正常打开软件的话，则请执行以下命令还原："
 warning "\tcp $CUR_INJECT_ASAR_PATH $INJECT_JS_DIR_ASAR_PATH\n"
-
 infos "您的序列号为："
 infos "\tLSGDW2-6M43UN-KHKH2A-D6FDJF"
 infos "\tD9KYN9-MCCL2F-59LFPC-NK2CPX\n"
