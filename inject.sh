@@ -112,7 +112,7 @@ mkinit(){
     		warning "\t\tsudo cp $CUR_PACKED_ASAR_PATH $INJECT_JS_DIR_ASAR_PATH"
     		exit 0
 	fi
-	if file_exists "$INJECT_JS_DIR_ASAR_PATH"; then
+	if file_exist "$INJECT_JS_DIR_ASAR_PATH"; then
     		warning "未找到 node_modules.asar！"
     		warning "请确认 Typora 安装目录下是否正确，以及该安装目录下的 resources 中是否存在 node_modules.asar!"
     		exit 0
