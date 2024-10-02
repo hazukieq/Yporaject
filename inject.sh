@@ -108,7 +108,7 @@ mkinit(){
     		infos "您可以有以下选择："
     		infos "\t 1. 删除目录"
     		warning "\t\trm $CUR_INJECT_JS_DIR_PATH -r\n"
-    		infos "\t 2. 复制已注入压缩包(已确认)至 $INJECT_ASAR_PATH"
+    		infos "\t 2. 复制已注入压缩包(已确认)至 $INJECT_JS_DIR_ASAR_PATH"
     		warning "\t\tsudo cp $CUR_PACKED_ASAR_PATH $INJECT_JS_DIR_ASAR_PATH"
     		exit 0
 	fi
