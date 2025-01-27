@@ -105,7 +105,6 @@ append_require2file() {
 mkinit(){
 	# 检查相关文件夹是否存在
 	file_exist "$CUR_INJECT_JS_DIR_PATH"
-	echo "$ret"
 	if [ "$ret" == "1" ]; then
 		warning "您可能已经注入过 hook 文件了！\n警告：在当前目录下发现 node 文件夹"
     		infos "您若不确定之前是否注入过该文件的话，请手动删除当前目录下的 node 文件夹($CUR_INJECT_JS_DIR_PATH)！\n"
