@@ -81,9 +81,11 @@ check_node(){
 # 判断文件是否存在
 file_exist() {
     if [ -e "$1" ]; then
-        return 0
+	infos "checking $* is exist..."
+        ret=1
     else
-        return 1
+	warning "checking $* is non-exist..."
+        ret=0
     fi
 }
 
@@ -102,7 +104,9 @@ append_require2file() {
 #前置准备工作
 mkinit(){
 	# 检查相关文件夹是否存在
-	if file_exist "$CUR_INJECT_JS_DIR_PATH"; then
+	file_exist "$CUR_INJECT_JS_DIR_PATH"
+	echo "$ret"
+	if [ "$ret" == "1" ]; then
 		warning "您可能已经注入过 hook 文件了！\n警告：在当前目录下发现 node 文件夹"
     		infos "您若不确定之前是否注入过该文件的话，请手动删除当前目录下的 node 文件夹($CUR_INJECT_JS_DIR_PATH)！\n"
     		infos "您可以有以下选择："
@@ -112,19 +116,20 @@ mkinit(){
     		warning "\t\tsudo cp $CUR_PACKED_ASAR_PATH $INJECT_JS_DIR_ASAR_PATH"
     		exit 0
 	fi
-	if file_exist "$INJECT_JS_DIR_ASAR_PATH"; then
-    		warning "未找到 node_modules.asar！"
+	file_exist "$INJECT_JS_DIR_ASAR_PATH"
+	if [ "$ret" == "1" ]; then
+	    # 检查 node 是否存在
+	    check_node
+	    
+	    # 复制 asar 文件至当前项目 build 下
+	    infos "复制 node_modules 至 当前目录下($(pwd)/build)"
+	    check_dangerous_cmd "sudo cp $INJECT_JS_DIR_ASAR_PATH $CUR_INJECT_ASAR_PATH"
+	    sudo cp $INJECT_JS_DIR_ASAR_PATH $CUR_INJECT_ASAR_PATH
+	else
+		warning "未找到 node_modules.asar！"
     		warning "请确认 Typora 安装目录下是否正确，以及该安装目录下的 resources 中是否存在 node_modules.asar!"
     		exit 0
 	fi
-
-	# 检查 node 是否存在
-	check_node
-
-	# 复制 asar 文件至当前项目 build 下
-	infos "复制 node_modules 至 当前目录下($(pwd)/build)"
-	check_dangerous_cmd "sudo cp $INJECT_JS_DIR_ASAR_PATH $CUR_INJECT_ASAR_PATH"
-	sudo cp $INJECT_JS_DIR_ASAR_PATH $CUR_INJECT_ASAR_PATH
 }
 
 ################## 函数配置部分 ###############
