@@ -8,9 +8,9 @@
 > 日期：2023年6月10日
 ---
 
-<h3 color="red">
+<span color="red">
 该方法无法支持 最新版本 1.10，请注意安装包版本号！
-</h3>
+</span>
 
 #### 已通过测试平台(来自原项目 Node_inject)
 - [x] Windows
